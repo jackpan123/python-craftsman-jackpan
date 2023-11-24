@@ -1,7 +1,26 @@
 from typing import List
 
 
+def magic_bubble_sort_2(numbers):
+    """有魔力的冒泡排序算法，所有的偶数都被认为比奇数大"""
+    j = len(numbers) - 1
+    while j > 0:
+        for i in range(j):
+            if numbers[i] % 2 == 0 and numbers[i + 1] % 2 == 1:
+                numbers[i], numbers[i + 1] = numbers[i + 1], numbers[i]
+                continue
+            elif (numbers[i + 1] % 2 == numbers[i] % 2) and numbers[i] > numbers[i + 1]:
+                numbers[i], numbers[i + 1] = numbers[i + 1], numbers[i]
+                continue
+        j -= 1
+    return numbers
+
+
 def magic_bubble_sort(numbers: List[int]):
+    """有魔力的冒泡排序算法，所有的偶数都被认为比奇数大
+
+    :param numbers: 需要排序的列表，函数将会直接修改原始列表
+    """
     stop_position = len(numbers) - 1
     while stop_position > 0:
         for i in range(stop_position):
