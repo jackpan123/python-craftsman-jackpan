@@ -45,5 +45,6 @@ def magic_bubble_sort(numbers: List[int]):
 
 
 if __name__ == '__main__':
-    numbers_arr = [23, 32, 1, 3, 4, 19, 20, 2, 4]
-    print(magic_bubble_sort(numbers_arr))
+    numbers_list = [23, 32, 1, 3, 4, 19, 20, 2, 4]
+    print(magic_bubble_sort(numbers_list))
+    print(magic_bubble_sort_2(numbers_list))
